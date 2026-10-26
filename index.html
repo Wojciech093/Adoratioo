@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#380b18">
+<meta name="description" content="Adoratio — modlitwa, liturgia i piękno Kościoła.">
+<title>Adoratio | Ad maiorem Dei gloriam</title>
+
+<style>
+:root {
+  --burgundy: #380b18;
+  --dark: #200710;
+  --gold: #d6b46a;
+  --cream: #f5ead5;
+  --muted: #c6b5ae;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--cream);
+  background: var(--dark);
+  font-family: Georgia, "Times New Roman", serif;
+}
+header {
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #72502d;
+  background: #2b0913;
+}
+.logo {
+  color: var(--gold);
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a, footer a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 14px;
+}
+nav a:hover, footer a:hover { color: var(--gold); }
+
+.hero {
+  min-height: 430px;
+  padding: 85px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at center, #651d2d 0%, #380b18 48%, #200710 100%);
+  border-bottom: 1px solid #72502d;
+}
+.cross { color: var(--gold); font-size: 48px; }
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 15px 0;
+  color: var(--gold);
+  font-size: clamp(43px, 8vw, 76px);
+  font-weight: normal;
+  letter-spacing: 7px;
+}
+.hero p {
+  max-width: 600px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.motto {
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--gold);
+}
+main { max-width: 1100px; margin: auto; padding: 55px 22px; }
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 35px;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 17px;
+}
+.tile {
+  display: block;
+  padding: 27px 20px;
+  min-height: 150px;
+  color: var(--cream);
+  text-decoration: none;
+  background: linear-gradient(145deg, #451321, #2b0913);
+  border: 1px solid #79552f;
+  border-radius: 3px;
+  transition: .2s;
+}
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  background: #501526;
+}
+.tile .symbol { font-size: 27px; color: var(--gold); }
+.tile h3 { color: var(--gold); font-size: 21px; font-weight: normal; }
+.tile p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.daily {
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #79552f;
+  background: #2b0913;
+}
+.daily h2 { color: var(--gold); font-weight: normal; }
+.daily p { color: var(--muted); line-height: 1.8; }
+footer {
+  padding: 28px 20px;
+  text-align: center;
+  border-top: 1px solid #72502d;
+  background: #2b0913;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+@media (max-width: 600px) {
+  header { flex-direction: column; }
+  nav { justify-content: center; }
+  .hero { min-height: 360px; padding: 55px 20px; }
+  h1 { letter-spacing: 4px; }
+  main { padding: 40px 16px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">ADORATIO</div>
+  <nav>
+    <a href="#glowna">Strona główna</a>
+    <a href="#modlitwy">Modlitwy</a>
+    <a href="#piesni">Pieśni</a>
+    <a href="#liturgia">Liturgia</a>
+  </nav>
+</header>
+
+<section class="hero" id="glowna">
+  <div class="cross">✠</div>
+  <div class="eyebrow">Modlitwa · Liturgia · Tradycja</div>
+  <h1>ADORATIO</h1>
+  <p>Miejsce modlitwy, kontemplacji i odkrywania piękna liturgii Kościoła.</p>
+  <div class="motto" id="motto">Ad maiorem Dei gloriam</div>
+</section>
+
+<main>
+  <h2 class="section-title">Odkryj Adoratio</h2>
+  <p class="subtitle">Wszystko, co pomaga zwrócić serce ku Bogu.</p>
+
+  <div class="tiles" id="modlitwy">
+    <a class="tile" href="#ojcze-nasz">
+      <div class="symbol">✠</div>
+      <h3>Pater noster</h3>
+      <p>Modlitwa Pańska po łacinie i polsku.</p>
+    </a>
+
+    <a class="tile" href="#zdrowas-maryjo">
+      <div class="symbol">✧</div>
+      <h3>Ave Maria</h3>
+      <p>Pozdrowienie anielskie — modlitwa do Matki Bożej.</p>
+    </a>
+
+    <a class="tile" href="#spowiedz">
+      <div class="symbol">❦</div>
+      <h3>Confiteor</h3>
+      <p>Akt pokuty w tradycji liturgicznej Kościoła.</p>
+    </a>
+
+    <a class="tile" href="#piesni" id="piesni">
+      <div class="symbol">♫</div>
+      <h3>Cantus sacri</h3>
+      <p>Pieśni kościelne, hymny i śpiewy łacińskie.</p>
+    </a>
+
+    <a class="tile" href="#liturgia" id="liturgia">
+      <div class="symbol">✥</div>
+      <h3>Liturgia Horarum</h3>
+      <p>Modlitwa brewiarzowa i Liturgia Godzin.</p>
+    </a>
+
+    <a class="tile" href="#droga-krzyzowa">
+      <div class="symbol">†</div>
+      <h3>Via Crucis</h3>
+      <p>Rozważania Męki Pańskiej i Droga Krzyżowa.</p>
+    </a>
+  </div>
+
+  <section class="daily">
+    <h2>Ad maiorem Dei gloriam</h2>
+    <p>Na większą chwałę Bożą.</p>
+    <p>
+      „Panie, naucz nas modlić się”.<br>
+      <em>Łk 11,1</em>
+    </p>
+  </section>
+
+  <section id="ojcze-nasz" class="daily">
+    <h2>Pater noster</h2>
+    <p>
+      Pater noster, qui es in caelis,<br>
+      sanctificetur nomen tuum.<br>
+      Adveniat regnum tuum.<br>
+      Fiat voluntas tua, sicut in caelo et in terra.<br>
+      Panem nostrum cotidianum da nobis hodie.<br>
+      Et dimitte nobis debita nostra,<br>
+      sicut et nos dimittimus debitoribus nostris.<br>
+      Et ne nos inducas in tentationem,<br>
+      sed libera nos a malo. Amen.
+    </p>
+  </section>
+
+  <section id="zdrowas-maryjo" class="daily">
+    <h2>Ave Maria</h2>
+    <p>
+      Ave Maria, gratia plena, Dominus tecum.<br>
+      Benedicta tu in mulieribus,<br>
+      et benedictus fructus ventris tui, Iesus.<br>
+      Sancta Maria, Mater Dei,<br>
+      ora pro nobis peccatoribus,<br>
+      nunc et in hora mortis nostrae. Amen.
+    </p>
+  </section>
+
+  <section id="spowiedz" class="daily">
+    <h2>Confiteor</h2>
+    <p>
+      Confiteor Deo omnipotenti,<br>
+      et vobis, fratres,<br>
+      quia peccavi nimis cogitatione, verbo, opere et omissione:<br>
+      mea culpa, mea culpa, mea maxima culpa.<br>
+      Ideo precor beatam Mariam semper Virginem,<br>
+      omnes Angelos et Sanctos,<br>
+      et vos, fratres, orare pro me ad Dominum Deum nostrum.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div>✠ ADORATIO ✠</div>
+  <div>Ad maiorem Dei gloriam</div>
+  <div>Projekt poświęcony modlitwie i pięknu liturgii.</div>
+  <a href="https://szkaplerz.info" target="_blank" rel="noopener noreferrer">Szkaplerz.info</a>
+</footer>
+
+<script>
+const mottos = [
+  "Ad maiorem Dei gloriam",
+  "Laudetur Iesus Christus",
+  "Crux sacra sit mihi lux"
+];
+
+let mottoIndex = 0;
+setInterval(() => {
+  mottoIndex = (mottoIndex + 1) % mottos.length;
+  const motto = document.getElementById("motto");
+  motto.style.opacity = "0";
+  setTimeout(() => {
+    motto.textContent = mottos[mottoIndex];
+    motto.style.opacity = "1";
+  }, 350);
+}, 5000);
+document.getElementById("motto").style.transition = "opacity .35s";
+</script>
+</body>
+</html>
